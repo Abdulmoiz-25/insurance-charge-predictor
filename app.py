@@ -12,14 +12,14 @@ model = load_model()
 
 st.title("💰 Insurance Charges Prediction App")
 
-# Sidebar Inputs
-st.sidebar.header("Enter Input Features")
-age = st.sidebar.slider("Age", 18, 100, 30)
-bmi = st.sidebar.slider("BMI", 10.0, 50.0, 25.0)
-children = st.sidebar.selectbox("Number of Children", [0, 1, 2, 3, 4, 5])
-sex = st.sidebar.selectbox("Sex", ["male", "female"])
-smoker = st.sidebar.selectbox("Smoker", ["yes", "no"])
-region = st.sidebar.selectbox("Region", ["northeast", "northwest", "southeast", "southwest"])
+# Sidebar Inputs -> Now moved to main page
+st.markdown("### Enter Input Features")
+age = st.slider("Age", 18, 100, 30)
+bmi = st.slider("BMI", 10.0, 50.0, 25.0)
+children = st.selectbox("Number of Children", [0, 1, 2, 3, 4, 5])
+sex = st.selectbox("Sex", ["male", "female"])
+smoker = st.selectbox("Smoker", ["yes", "no"])
+region = st.selectbox("Region", ["northeast", "northwest", "southeast", "southwest"])
 
 # Preprocessing
 sex_male = 1 if sex == "male" else 0
